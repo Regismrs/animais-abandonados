@@ -1,0 +1,1060 @@
+/* ===================================================
+   ABANDONADOS
+   style.css
+=================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+:root{
+
+    --marrom:#4E342E;
+    --marrom2:#6D4C41;
+    --marrom3:#8D6E63;
+
+    --bege:#F8F5F0;
+    --bege2:#FFFDF9;
+
+    --vermelho:#C62828;
+
+    --verde:#5E8C31;
+
+    --texto:#3E2723;
+
+    --sombra:0 12px 30px rgba(0,0,0,.12);
+
+    --radius:18px;
+
+    --transition:.35s;
+
+    --largura:1200px;
+
+}
+
+
+/* ====================== RESET ===================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bege);
+
+    color:var(--texto);
+
+    font-family:'Nunito',sans-serif;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:110px 8%;
+
+}
+
+h1,h2,h3{
+
+    font-family:'Baloo 2',cursive;
+
+    color:var(--marrom);
+
+}
+
+h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+h2{
+
+    font-size:3rem;
+
+    margin-bottom:25px;
+
+}
+
+h3{
+
+    font-size:1.5rem;
+
+    margin:18px 0;
+
+}
+
+p{
+
+    font-size:1.15rem;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ====================== MENU ===================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    transition:.4s;
+
+}
+
+.menu{
+
+    max-width:var(--largura);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px;
+
+}
+
+.logo{
+
+    font-size:1.6rem;
+
+    font-family:'Baloo 2';
+
+    font-weight:bold;
+
+    color:white;
+
+    letter-spacing:1px;
+
+}
+
+.menu ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.menu a{
+
+    color:white;
+
+    font-weight:700;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:#ffd6b8;
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-6px;
+
+    left:0;
+
+    width:0;
+
+    height:2px;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* menu após scroll */
+
+header.scrolled{
+
+    background:rgba(78,52,46,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 5px 18px rgba(0,0,0,.18);
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("imgs/animaisabandonados.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+}
+
+.hero-texto{
+
+    width:50%;
+
+}
+
+.hero h1{
+
+    color:white;
+
+}
+
+.hero p{
+
+    font-size:1.25rem;
+
+    max-width:600px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-img{
+
+    width:42%;
+
+    animation:flutuar 5s ease-in-out infinite;
+
+}
+
+.hero-img img{
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+}
+
+
+/* ================= BOTÕES ================= */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--vermelho);
+
+    color:white;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#9b1f1f;
+
+}
+
+
+/* ================= SEÇÕES ================= */
+
+.section{
+
+    max-width:var(--largura);
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+.section:nth-child(even){
+
+    background:var(--bege2);
+
+}
+
+.invertida{
+
+    flex-direction:row-reverse;
+
+}
+
+.texto{
+
+    width:50%;
+
+}
+
+.imagem{
+
+    width:45%;
+
+}
+
+.imagem img{
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+    transition:.4s;
+
+}
+
+.imagem img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/* ================= TITULOS ================= */
+
+.cards>h2{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+
+/* ================= GRID ================= */
+
+.grid{
+
+    max-width:var(--largura);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+
+/* ================= CARD ================= */
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.15);
+
+}
+
+.card i{
+
+    font-size:3rem;
+
+    color:var(--vermelho);
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    margin:0;
+
+}
+
+
+/* ================= LISTAS ================= */
+
+.texto ul{
+
+    padding-left:20px;
+
+}
+
+.texto li{
+
+    margin-bottom:15px;
+
+    font-size:1.1rem;
+
+    position:relative;
+
+}
+
+.texto li::before{
+
+    content:"🐾";
+
+    margin-right:10px;
+
+}
+
+/*===================================================
+=            COMPARTILHAR                           =
+===================================================*/
+
+.compartilhar{
+
+    background:linear-gradient(135deg,#5d4037,#8d6e63);
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 8%;
+
+}
+
+.compartilhar h2{
+
+    color:white;
+
+    margin-bottom:40px;
+
+}
+
+.redes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.redes a{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:2rem;
+
+    background:white;
+
+    color:var(--marrom);
+
+    transition:.35s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+.redes a:hover{
+
+    transform:translateY(-8px) scale(1.08);
+
+    background:var(--vermelho);
+
+    color:white;
+
+}
+
+
+/*===================================================
+=                     FOOTER                        =
+===================================================*/
+
+footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:70px;
+
+    padding:120px 8%;
+
+    background:#2b1d18;
+
+    color:white;
+
+}
+
+.footer-img{
+
+    width:45%;
+
+}
+
+.footer-img img{
+
+    border-radius:25px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.footer-texto{
+
+    width:45%;
+
+}
+
+.footer-texto h2{
+
+    color:white;
+
+    font-size:3rem;
+
+}
+
+.footer-texto p{
+
+    color:#ddd;
+
+    margin:25px 0 40px;
+
+}
+
+
+/*===================================================
+=                 SCROLLBAR                         =
+===================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f2ece7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7b5a4d;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5d4037;
+
+}
+
+
+/*===================================================
+=                 SELEÇÃO                           =
+===================================================*/
+
+::selection{
+
+    background:var(--vermelho);
+
+    color:white;
+
+}
+
+
+/*===================================================
+=                 ANIMAÇÕES                         =
+===================================================*/
+
+@keyframes flutuar{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.hero .btn{
+
+    animation:pulse 2.5s infinite;
+
+}
+
+
+/*===================================================
+=              HOVER GERAL                          =
+===================================================*/
+
+.card,
+.btn,
+.redes a,
+.imagem img{
+
+    transition:all .35s ease;
+
+}
+
+
+/*===================================================
+=               RESPONSIVO TABLET                   =
+===================================================*/
+
+@media(max-width:1100px){
+
+    h1{
+
+        font-size:3rem;
+
+    }
+
+    h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        text-align:center;
+
+        padding-top:120px;
+
+    }
+
+    .hero-texto{
+
+        width:100%;
+
+    }
+
+    .hero-img{
+
+        width:70%;
+
+    }
+
+    .section{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .invertida{
+
+        flex-direction:column;
+
+    }
+
+    .texto{
+
+        width:100%;
+
+    }
+
+    .imagem{
+
+        width:80%;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .footer-img{
+
+        width:80%;
+
+    }
+
+    .footer-texto{
+
+        width:100%;
+
+    }
+
+}
+
+
+/*===================================================
+=              RESPONSIVO CELULAR                   =
+===================================================*/
+
+@media(max-width:768px){
+
+    section{
+
+        padding:70px 25px;
+
+    }
+
+    h1{
+
+        font-size:2.4rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    p{
+
+        font-size:1rem;
+
+    }
+
+    .menu{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .menu ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+    .logo{
+
+        font-size:1.3rem;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-bottom:70px;
+
+    }
+
+    .hero-img{
+
+        width:100%;
+
+    }
+
+    .imagem{
+
+        width:100%;
+
+    }
+
+    .footer-img{
+
+        width:100%;
+
+    }
+
+    .redes{
+
+        gap:18px;
+
+    }
+
+    .redes a{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:1.6rem;
+
+    }
+
+    .btn{
+
+        padding:14px 28px;
+
+    }
+
+}
+
+
+/*===================================================
+=              RESPONSIVO PEQUENO                   =
+===================================================*/
+
+@media(max-width:480px){
+
+    h1{
+
+        font-size:2rem;
+
+    }
+
+    h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    .menu ul{
+
+        font-size:.9rem;
+
+    }
+
+}
+
+
+/*===================================================
+=           EFEITOS EXTRAS                          =
+===================================================*/
+
+.card:nth-child(odd){
+
+    animation:aparecer .8s ease;
+
+}
+
+.card:nth-child(even){
+
+    animation:aparecer 1s ease;
+
+}
+
+.imagem img:hover{
+
+    filter:brightness(1.05);
+
+}
+
+footer .btn{
+
+    background:var(--verde);
+
+}
+
+footer .btn:hover{
+
+    background:#446622;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:120px;
+
+    background:linear-gradient(to top,var(--bege),transparent);
+
+}
+
+.hero{
+
+    position:relative;
+
+}
+
+.hero>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
