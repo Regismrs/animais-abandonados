@@ -569,6 +569,27 @@ header.scrolled{
 
 }
 
+blockquote {
+    padding: 1em;
+    font-size: small;
+}
+
+div.credit {
+    text-align: center; 
+    color: #fff; 
+    background: #251713; 
+    padding: 20px 0;
+}
+
+blockquote a, .credit a {
+    border-bottom: 2px dashed royalblue;
+}
+
+blockquote a:hover, .credit a:hover {
+    border-bottom: 2px dashed rebeccapurple;
+    font-weight: bold;
+}
+
 
 /*===================================================
 =                     FOOTER                        =
